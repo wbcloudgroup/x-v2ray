@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-xray 官方网站</title>
+    <style>
+        body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: #333; }
+        header { background: #0078D4; color: #fff; padding: 20px; text-align: center; }
+        nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; }
+        nav li { margin: 0 15px; }
+        nav a { color: #fff; text-decoration: none; font-weight: bold; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        .hero { text-align: center; padding: 80px 20px; background: #f5f5f5; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.125rem; margin-bottom: 30px; }
+        .btn { display: inline-block; padding: 12px 24px; background: #0078D4; color: #fff; text-decoration: none; border-radius: 4px; }
+        section { margin-bottom: 60px; }
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+        .feature-card { padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background: #fff; }
+        .feature-card h3 { margin-top: 0; }
+        footer { background: #222; color: #aaa; text-align: center; padding: 20px; }
+        footer a { color: #0078D4; text-decoration: none; }
+        .policy { background: #fafafa; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; }
+        .policy h2 { margin-top: 0; }
+    </style>
+</head>
+<body>
+    <header>
+      <svg width="64" height="64" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+          <!-- 定义渐变 -->
+          <defs>
+              <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#0066ff;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#00a2ff;stop-opacity:1" />
+              </linearGradient>
+          </defs>
+
+          <!-- 背景 -->
+          <rect width="1024" height="1024" fill="#f8f9fa"/>
+
+          <!-- 装饰圆环 -->
+          <circle cx="512" cy="512" r="400" fill="none" stroke="url(#blueGradient)" stroke-width="2" opacity="0.2"/>
+          <circle cx="512" cy="512" r="380" fill="none" stroke="url(#blueGradient)" stroke-width="2" opacity="0.2"/>
+
+          <!-- 主图形：V 形状 -->
+          <path d="M 312 312 L 512 712 L 712 312"
+                fill="none"
+                stroke="url(#blueGradient)"
+                stroke-width="70"
+                stroke-linecap="round"
+                filter="drop-shadow(0 0 10px rgba(0,102,255,0.3))"/>
+
+          <!-- X 射线效果 -->
+          <g stroke="url(#blueGradient)" stroke-width="35" opacity="0.8">
+              <line x1="412" y1="412" x2="612" y2="612"/>
+              <line x1="412" y1="612" x2="612" y2="412"/>
+          </g>
+
+          <!-- 文字：v-xray -->
+          <text x="512" y="850"
+                font-family="'SF Pro Display', Arial, sans-serif"
+                font-size="130"
+                font-weight="600"
+                fill="url(#blueGradient)"
+                text-anchor="middle"
+                letter-spacing="2">
+              v-xray
+          </text>
+      </svg>
+        <h1>v-xray</h1>
+        <nav>
+            <ul>
+                <li><a href="#features">功能亮点</a></li>
+                <li><a href="#import">导入方式</a></li>
+                <li><a href="#security">安全稳定</a></li>
+                <li><a href="#download">下载</a></li>
+                <li><a href="#privacy">隐私政策</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>基于 Xray 内核的开源代理应用</h1>
+        <p>简单易用、安全稳定，畅享全球网络，满足日常浏览、视频娱乐与远程办公需求。</p>
+        <a href="https://testflight.apple.com/join/uX5kxzSv" class="btn">
+          立即下载iOS版本 v-Xray
+        </a>
+    </section>
+    <div class="container">
+        <section id="features">
+            <h2>功能亮点</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>简单上手</h3>
+                    <p>界面直观友好，新手零门槛，高级用户可自定义设置，满足多种使用需求。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>多种导入方式</h3>
+                    <p>支持复制粘贴分享链接及二维码扫描两种导入方式，一键添加节点，快捷方便。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>安全稳定</h3>
+                    <p>基于 Xray 内核，多协议支持，强大加密技术，有效保障上网隐私与数据安全。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>纯净无广告</h3>
+                    <p>专注科学上网功能，界面纯净无广告干扰，畅享网络世界。</p>
+                </div>
+            </div>
+        </section>
+        <section id="import">
+            <h2>节点导入</h2>
+            <p>支持两种便捷方式：</p>
+            <ul>
+                <li><strong>复制粘贴：</strong>粘贴分享链接，一键完成。</li>
+                <li><strong>二维码扫描：</strong>扫码导入，省去手动输入烦恼。</li>
+            </ul>
+        </section>
+        <section id="security">
+            <h2>安全与开源</h2>
+            <p>100% 开源项目，代码公开透明，开发社区持续维护更新，安全可靠。</p>
+        </section>
+        <section id="download">
+            <h2>下载 v-xray</h2>
+            <p>后续支持 Windows、macOS、Linux、Android 多平台，选择适合您的版本：</p>
+            <a href="#" class="btn" style="margin-left: 10px;">更多版本</a>
+        </section>
+        <section id="privacy">
+            <h2>隐私政策</h2>
+            <div class="policy">
+                <h3>V-xray 隐私声明</h3>
+                <p>V-xray 是一款专注于提供 VPN 服务的应用程序。我们非常重视用户的隐私保护，并承诺：</p>
+                <ul>
+                    <li>不收集任何 VPN 使用数据</li>
+                    <li>不收集任何个人隐私信息</li>
+                    <li>不存储用户连接日志</li>
+                    <li>不追踪用户在线活动</li>
+                </ul>
+                <h3>数据收集</h3>
+                <p>V-xray 仅收集运行应用程序所必需的最少信息，包括：</p>
+                <ul>
+                    <li>应用程序崩溃日志（用于改进应用稳定性）</li>
+                    <li>基本设备信息（用于提供 VPN 服务）</li>
+                </ul>
+                <h3>数据安全</h3>
+                <p>我们采用业界标准的安全措施保护您的数据安全。所有数据传输都经过加密处理。</p>
+                <h3>联系方式</h3>
+                <p>如果您对我们的隐私政策有任何疑问，请通过以下方式联系我们：<br>
+                邮箱：<a href="mailto:support@v-xray.com">support@v-xray.com</a></p>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 v-xray 开源项目</p>
+    </footer>
+</body>
+</html>
